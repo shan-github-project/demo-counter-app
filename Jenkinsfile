@@ -4,46 +4,46 @@ pipeline{
     
     stages {
         
-        stage('Git Checkout'){
+        // stage('Git Checkout'){
             
-            steps{
+        //     steps{
                 
-                script{
+        //         script{
                     
-                    git branch: 'main', url: 'https://github.com/vikash-kumar01/mrdevops_javaapplication.git'
-                }
-            }
-        }
-        stage('UNIT testing'){
+        //             git branch: 'main', url: 'https://github.com/vikash-kumar01/mrdevops_javaapplication.git'
+        //         }
+        //     }
+        // }
+        // stage('UNIT testing'){
             
-            steps{
+        //     steps{
                 
-                script{
+        //         script{
                     
-                    sh 'mvn test'
-                }
-            }
-        }
-        stage('Integration testing'){
+        //             sh 'mvn test'
+        //         }
+        //     }
+        // }
+        // stage('Integration testing'){
             
-            steps{
+        //     steps{
                 
-                script{
+        //         script{
                     
-                    sh 'mvn verify -DskipUnitTests'
-                }
-            }
-        }
-        stage('Maven build'){
+        //             sh 'mvn verify -DskipUnitTests'
+        //         }
+        //     }
+        // }
+        // stage('Maven build'){
             
-            steps{
+        //     steps{
                 
-                script{
+        //         script{
                     
-                    sh 'mvn clean install'
-                }
-            }
-        }
+        //             sh 'mvn clean install'
+        //         }
+        //     }
+        // }
         stage('Static code analysis'){
             
             steps{
